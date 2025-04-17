@@ -1,0 +1,194 @@
+/* styles.css for Pandi's Chemistry App */
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #e6f7ff; /* Light sky blue background */
+    padding: 20px;
+}
+
+header, footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    color: #0077be; /* Sky blue heading */
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 119, 190, 0.2); /* Sky blue shadow */
+    border: 1px solid #87ceeb; /* Sky blue border */
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #0077be; /* Sky blue heading */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #87ceeb; /* Sky blue border */
+}
+
+/* Periodic Table Styles */
+.periodic-table-container {
+    overflow-x: auto;
+}
+
+.periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, minmax(60px, 1fr));
+    grid-gap: 3px;
+    margin: 20px 0;
+}
+
+.element {
+    position: relative;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid rgba(135, 206, 235, 0.3); /* Light sky blue border */
+}
+
+.element:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 119, 190, 0.3); /* Sky blue shadow */
+    z-index: 10;
+}
+
+.element .atomic-number {
+    font-size: 0.8em;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+
+.element .symbol {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 8px 0 4px;
+}
+
+.element .name {
+    font-size: 0.7em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.element .mass {
+    font-size: 0.7em;
+    color: #555;
+}
+
+/* Element Categories - with sky blue tints */
+.alkali-metal { background-color: #c4e3f3; } /* Light sky blue tint */
+.alkaline-earth { background-color: #d1e9f7; }
+.transition-metal { background-color: #e1f1fa; }
+.post-transition-metal { background-color: #b3e0ff; }
+.metalloid { background-color: #a1d6e2; }
+.nonmetal { background-color: #87ceeb; } /* Sky blue */
+.halogen { background-color: #b8dff5; }
+.noble-gas { background-color: #c9e9f9; }
+.lanthanide { background-color: #d6eaf8; }
+.actinide { background-color: #e8f4fc; }
+.unknown { background-color: #f0f8ff; } /* Alice blue */
+
+/* Element Details Section */
+.element-details {
+    padding: 20px;
+    background-color: #f0f8ff; /* Alice blue background */
+    border-radius: 8px;
+    min-height: 200px;
+    border: 1px solid #87ceeb; /* Sky blue border */
+}
+
+#element-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#element-info h3 {
+    margin-bottom: 15px;
+    color: #0077be; /* Sky blue heading */
+}
+
+#element-info p {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #87ceeb; /* Sky blue background */
+    color: #333;
+    border-radius: 8px;
+}
+
+footer a {
+    color: #0055a4; /* Darker blue for contrast */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #003366; /* Even darker on hover */
+}
+
+.resources, .license {
+    margin: 15px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .periodic-table {
+        grid-template-columns: repeat(9, minmax(40px, 1fr));
+    }
+    
+    .element {
+        padding: 4px;
+    }
+    
+    .element .symbol {
+        font-size: 1.2em;
+    }
+    
+    .element .name, .element .mass {
+        font-size: 0.6em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    main {
+        padding: 10px;
+    }
+    
+    .periodic-table {
+        grid-template-columns: repeat(4, minmax(35px, 1fr));
+    }
+}
