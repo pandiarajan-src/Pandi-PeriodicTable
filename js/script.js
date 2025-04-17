@@ -171,22 +171,8 @@ function generatePeriodicTable() {
     // Add legend
     const legendDiv = document.createElement('div');
     legendDiv.className = 'element-legend';
-    legendDiv.innerHTML = `
-        <h3>Element Categories</h3>
-        <div class="legend-items">
-            <div class="legend-item"><span class="legend-color alkali-metal"></span> Alkali Metals</div>
-            <div class="legend-item"><span class="legend-color alkaline-earth"></span> Alkaline Earth Metals</div>
-            <div class="legend-item"><span class="legend-color transition-metal"></span> Transition Metals</div>
-            <div class="legend-item"><span class="legend-color post-transition-metal"></span> Post-Transition Metals</div>
-            <div class="legend-item"><span class="legend-color metalloid"></span> Metalloids</div>
-            <div class="legend-item"><span class="legend-color nonmetal"></span> Nonmetals</div>
-            <div class="legend-item"><span class="legend-color halogen"></span> Halogens</div>
-            <div class="legend-item"><span class="legend-color noble-gas"></span> Noble Gases</div>
-            <div class="legend-item"><span class="legend-color lanthanide"></span> Lanthanides</div>
-            <div class="legend-item"><span class="legend-color actinide"></span> Actinides</div>
-            <div class="legend-item"><span class="legend-color unknown"></span> Unknown Properties</div>
-        </div>
-    `;
+    // Legend content removed as per request
+    legendDiv.innerHTML = '';
     periodicTableContainer.appendChild(legendDiv);
 }
 
